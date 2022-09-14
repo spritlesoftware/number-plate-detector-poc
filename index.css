@@ -1,0 +1,166 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+body{
+    height: 100% !important;
+    
+
+}
+
+.navbar
+{
+    height: 15% !important;
+}
+
+
+  tbody {
+        display:block;
+        max-height:470px;
+        overflow-y:auto;
+  }
+  thead, tbody tr {
+    display:table;
+    width:100%;
+    table-layout:fixed;
+    font-family: 'Noto Sans', sans-serif;
+}
+  thead {
+    width: calc( 100% - 0em )
+  } 
+
+  .btn-primary
+  {
+    width:100px !important;
+    background-color: #009879 !important;
+    border: none !important;
+  }
+
+  .btn-secondary
+  {
+    background-color: white !important;
+    border: 2px solid #009879 !important;
+    color: #009879 !important;
+    width:100px !important;
+  }
+
+
+  .table-bordered thead th {
+    border-bottom-width: 2px;
+    text-align: center;
+    background-color: #009879;
+    color: #fff;
+}
+
+.table-bordered td, .table-bordered th {
+    border: 1px solid #dee2e6;
+    text-align: center;
+}
+
+
+.content-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .content-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  .content-table th,
+  .content-table td {
+    padding: 12px 15px;
+  }
+  
+  .content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+  }
+  
+  .content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+  
+  .content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+  }
+  
+  .content-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+  }
+  
+
+  
+/***** Global Slide *****/
+.slide-right, .slide-left {
+    width: 100%;
+  }
+  
+  /***** Slide Right *****/
+  .slide-right {
+    animation: 3s slide-right;
+  }
+  @keyframes slide-right {
+    from {
+      margin-left: -100%;
+    }
+    to {
+      margin-left: 0%;
+    }
+  }
+  
+  /***** Slide Left *****/
+  .slide-left {
+    animation: 1s slide-left;
+  }
+  @keyframes slide-left {
+    from {
+      margin-left: 100%;
+    }
+    to {
+      margin-left: 0%;
+    }
+  }
+  
+  /***** Misc Styles *****/
+  .container {
+    width: 500px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 25px #000;
+    margin-top: 30px;
+    border: 1px solid #444;  
+    text-align: center;
+  }
+  body {
+    background: #e2e2e2;
+  }
+  
+  /***** FadeIn Underline *****/
+  .line {
+    border-bottom: 3px solid red;
+    width: 200px;
+    margin: auto;
+  }
+  .fade-in {
+    animation: fadeIn ease 1s;
+  }
+  @keyframes fadeIn{
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  

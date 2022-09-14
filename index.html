@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+        <!-- Just an image -->
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand mx-3" href="#">
+                <img src="spritle.svg" style="width:120px" alt="">
+            </a>
+        </nav>
+
+
+        <div class="row mx-3">
+            <div style="background-color:#fff;" class="col-sm-12 col-lg-8 p-3">
+                 <video width="100%" controls autoplay muted>
+                    <source src="traffic.mp4" type="video/mp4">
+                  </video> 
+                 
+            <div class="col-lg-12 d-flex justify-content-center pt-2">
+                <button type="button" class="btn btn-primary btn-1">Reports</button>
+            </div>
+            </div>
+
+        <div class="col-sm-12 col-lg-4"> 
+            <div id="row-container" class="">
+                <table class="content-table">
+                    <thead class="">
+                      <tr>
+                        <th class="col-xs-3 text-center">Vechicle Num Captured</th>
+                        <th class="col-xs-3 text-center">Insurence current Status</th>
+                        <th class="col-xs-6 text-center">Insurence Exp Date</th>
+                      </tr>
+                    </thead>
+                    <tbody class="text-center slide-left" id="tbody-append">
+                     
+                    </tbody>
+                  </table>
+              </div>
+        </div>
+    
+        </div>
+
+            
+
+
+
+    </body>
+
+    <script type="text/javascript">
+        var arr = [];
+        arr[3]= "PL08YTD";
+        arr[4]= "WN59WFM";
+        arr[4]= "LJ63KGG";
+        arr[5]= "S26ECJ";
+        arr[7]= "WK06LJZ,P471PHW";
+        arr[9]= "P471PHW";
+        arr[10]= "GL57HGF";
+        arr[11]= "CL558FZ";
+        arr[12]= "LD62PBU";
+        arr[12]= "LJ07OCN";
+        arr[13]= "LA51VRG";
+        arr[15]= "L059FWW,EX07WCT,AK62WVS";
+        arr[17]= "LX14GDF,KT58CWD";
+        arr[19]= "KU53JYE";
+        arr[20]= "LK55PCF";
+        arr[23]= "CN54DXH,YTX805";
+        arr[26]= "JI8ATE, P062FXG,LB59FBV";
+        arr[23]= "FY55PNF,MX62MFE";
+        arr[28]= "GY52KLF,DN05YTM";
+        arr[29]= "GV55SYG";
+        arr[31]= "865VMX,P571XWV";
+        arr[33]= "RA05NNZ,LS08WHJ,K09DHN";
+        arr[35]= "RX11EWG";
+        arr[36]= "GV13GUU";
+        arr[37]= "oV08GOJ";
+        arr[39]= "SM06XLF";
+        arr[40]= "256D251";
+        arr[41]= "XPO9BUJ";
+        arr[43]= "RE12NRY";
+        arr[46]= "BP12ZBD";
+        arr[48]= "DN53BXW";
+        arr[51]= "LT14BRZ";
+        arr[52]= "GK62TNL";
+        arr[53]= "BK04ZCA";
+        arr[55]= "REO6WKK";
+        arr[56]= "AEO6NGN";
+        arr[57]= "Y984NLO";
+        arr[58]= "BWO3PFG";
+        arr[59]= "MX62FNP";
+        
+
+        // cars[2]= "BMW";
+        var i = 1;
+        function greet() {
+            if(i == 59) {
+                clearInterval(t);
+            }
+            if(arr[i] != 'null' && arr[i] != undefined) {
+                var spl = arr[i].split(",");
+                spl.forEach(myFunction);
+            }
+            i++;
+        }
+        function myFunction(item, index) {
+            var textArray = ["Yes"," No "];
+            var randomIndex = Math.floor(Math.random() * textArray.length); 
+            // var randomElement = ;
+            //   console.log(item);
+            var month = [...Array(12).keys()];
+            var monthRandomIndex = Math.floor(Math.random() * month.length); 
+            var date = [...Array(30).keys()];
+            var dateRandomIndex = Math.floor(Math.random() * date.length); 
+// color:green;
+
+
+
+console.log(textArray[randomIndex]==="Yes")
+            var html = `<tr class="slide-right"><td class="col-xs-3">`+item+`</td><td class="col-xs-3 ${textArray[randomIndex]==="Yes" ? "text-success" : "text-danger"}">`+textArray[randomIndex]+'</td><td class="col-xs-6">'+month[monthRandomIndex]+'/'+date[dateRandomIndex]+'/2023</td></tr>';
+            $('#tbody-append').append(html);
+        }
+        var t = setInterval(greet,1000);
+
+
+
+    </script>
+
+    </html>
+
+    
